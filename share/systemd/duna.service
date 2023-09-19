@@ -1,0 +1,16 @@
+[Unit]
+Description=Duna Slideshow
+After=graphical.target
+
+StartLimitIntervalSec=500
+StartLimitBurst=5
+
+[Service]
+User=pi
+WorkingDirectory=/var/lib/duna
+ExecStart=/opt/duna/bin/duna.sh
+Restart=on-failure
+RestartSec=2s
+
+[Install]
+WantedBy=graphical.target

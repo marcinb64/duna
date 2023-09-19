@@ -1,0 +1,37 @@
+{
+    "apiKey": "api key here",
+    "output": {
+        "display": {
+            "interval": "4m",
+            "updateInterval": "6h",
+            "firstUpdateDelay": "30s"
+        }
+    },
+    "channels": [
+        {
+            "static": {
+                "urls": [
+                    "https://everydayastronaut.com/upcoming-launches/",
+                    "slideshow/nasa-apod.jpg"
+                ],
+                "updates": [
+                    "APOD"
+                ]
+            }
+        },
+        {
+            "rover": {
+                "name": "curiosity",
+                "camera": "NAVCAM",
+                "sequenceLimit": 5
+            }
+        },
+        {
+            "rover": {
+                "name": "perseverance",
+                "camera": "MCZ_LEFT",
+                "sequenceLimit": 5
+            }
+        }
+    ]
+}
