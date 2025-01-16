@@ -67,13 +67,13 @@ class RoverApi(NasaApi):
 
     def __init__(self, apiKey, rover):
         super().__init__(apiKey)
-        self.manifestUrl = self.buildUrl("/mars-photos/api/v1/manifests/" + rover)
+        self.manifestUrl = self.buildUrl("/mars-photos/api/v1/rovers/" + rover)
         self.imagesUrl = self.buildUrl("/mars-photos/api/v1/rovers/" + rover + "/photos")
 
 
     def getLastSol(self):
         ''' Return the latest available sol numer '''
-        return int(self.get(self.manifestUrl)["photo_manifest"]["max_sol"])
+        return int(self.get(self.manifestUrl)["rover"]["max_sol"])
 
 
     def listCameras(self, sol):

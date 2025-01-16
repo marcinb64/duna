@@ -20,7 +20,7 @@ The slide show can also include statically pre-configured web pages and images.
 
 3. Install dependencies
 
-    `sudo apt install python3-wget`
+    `sudo apt install python3-wget python3-qtpy`
 
 4. Download this repository into `/opt/duna` (you should have `/opt/duna/bin` and `/opt/duna/share` dirs)
     ```
